@@ -14,32 +14,23 @@ class ZooViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     var plistData:NSString = ""
     var data:NSMutableDictionary = NSMutableDictionary()
     var contentID:NSString=""
-
-   
-    @IBAction func PublishButton(sender: AnyObject) {
-        self.presentViewController(PublishViewController(), animated: true, completion: nil)
-        
-    }
+    
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-// read plist
-        
+//  -----------读取plist文件----------------
          plistData = NSBundle.mainBundle().pathForResource("TestCellPlist", ofType: "plist")!
          data = NSMutableDictionary(contentsOfFile: plistData)!
         
-    //   println(data)
-    //   println(data["1"])
-        
-//        let n = 1
-//        if (n == 1)
-//        {
-//            self.presentViewController(LoginViewController(), animated: true, completion: nil)
-//        }
-//     
+
+//     -------------发新消息-----------------
+        var publishButton = UIButton()
+        publishButton.frame = CGRectMake(280,520,30,30)
+        publishButton.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(publishButton)
        
     }
 
@@ -65,6 +56,8 @@ class ZooViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         var dataGroup = data["\(dataRow)"] as NSDictionary
         
         tableCell.UserName.text = dataGroup["UserName"] as NSString     //cell用户名
+        
+  //      tableCell.UserName.text = dataGroup["ContentID"] as NSString
         tableCell.PublishTime.text = dataGroup["PublishTime"] as NSString   //cell时间
         tableCell.PublishContent.text = dataGroup["PublishContent"] as NSString  //cell 内容
         
@@ -95,6 +88,7 @@ class ZooViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         var idRow = indexPath.row + 1
         var idGroup = data["\(idRow)"] as NSDictionary
         contentID = idGroup["ContentID"] as NSString
+    
         println("点击时")
         println(contentID)
 
@@ -103,11 +97,13 @@ class ZooViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-             if segue.identifier == "goDetailContentSegue"{
+            if segue.identifier == "goDetailContentSegue"{
             var goDetailContent = segue.destinationViewController as DetailContentViewController
-            goDetailContent.receive = contentID as NSString
+        
+                goDetailContent.receive = contentID  as NSString
             
                 println("传值时的值")
+                println(goDetailContent.receive)
                 println(contentID)
         }
  

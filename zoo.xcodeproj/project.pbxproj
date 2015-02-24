@@ -23,6 +23,8 @@
 		5ED0DA341A5544300095B2E1 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0DA331A5544300095B2E1 /* UserCenterViewController.swift */; };
 		5ED0DA361A5547BB0095B2E1 /* DetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0DA351A5547BB0095B2E1 /* DetailContentViewController.swift */; };
 		5EFCCFBB1A799F5E001B3702 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCCFBA1A799F5E001B3702 /* LoginViewController.swift */; };
+		B3A94F741A936CAD004E9879 /* UserCenterCell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3A94F731A936CAD004E9879 /* UserCenterCell.plist */; };
+		B3C865A21A95C0C000B8808F /* UserCenterCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C865A11A95C0C000B8808F /* UserCenterCellClass.swift */; };
 		B3FD53851A88DEE900E969F8 /* PublishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FD53841A88DEE900E969F8 /* PublishViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +60,8 @@
 		5ED0DA331A5544300095B2E1 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCenterViewController.swift; path = ../UserCenterViewController.swift; sourceTree = "<group>"; };
 		5ED0DA351A5547BB0095B2E1 /* DetailContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailContentViewController.swift; path = ../DetailContentViewController.swift; sourceTree = "<group>"; };
 		5EFCCFBA1A799F5E001B3702 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		B3A94F731A936CAD004E9879 /* UserCenterCell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserCenterCell.plist; sourceTree = "<group>"; };
+		B3C865A11A95C0C000B8808F /* UserCenterCellClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterCellClass.swift; sourceTree = "<group>"; };
 		B3FD53841A88DEE900E969F8 /* PublishViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublishViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,14 +83,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5EBCBF831A612E560087CF66 /* plist */ = {
-			isa = PBXGroup;
-			children = (
-				5EBCBF811A612E1B0087CF66 /* TestCellPlist.plist */,
-			);
-			name = plist;
-			sourceTree = "<group>";
-		};
 		5ED0D9F91A551FF70095B2E1 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +120,6 @@
 				5ED0DA0E1A551FF80095B2E1 /* Images.xcassets */,
 				5ED0DA101A551FF80095B2E1 /* LaunchScreen.xib */,
 				5ED0DA371A5547D00095B2E1 /* class */,
-				5EBCBF831A612E560087CF66 /* plist */,
 				5ED0DA051A551FF80095B2E1 /* Supporting Files */,
 			);
 			path = zoo;
@@ -134,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				5ED0DA061A551FF80095B2E1 /* Info.plist */,
+				5EBCBF811A612E1B0087CF66 /* TestCellPlist.plist */,
+				B3A94F731A936CAD004E9879 /* UserCenterCell.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -159,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				5ED0DA271A5522950095B2E1 /* TableViewCellClass.swift */,
+				B3C865A11A95C0C000B8808F /* UserCenterCellClass.swift */,
 			);
 			name = class;
 			sourceTree = "<group>";
@@ -249,6 +247,7 @@
 				5ED0DA301A5523600095B2E1 /* 头像1.jpg in Resources */,
 				5ED0DA2D1A5523600095B2E1 /* 1.jpg in Resources */,
 				5ED0DA2E1A5523600095B2E1 /* 2.jpg in Resources */,
+				B3A94F741A936CAD004E9879 /* UserCenterCell.plist in Resources */,
 				5ED0DA2F1A5523600095B2E1 /* 3.jpg in Resources */,
 				5ED0DA121A551FF80095B2E1 /* LaunchScreen.xib in Resources */,
 				5ED0DA0F1A551FF80095B2E1 /* Images.xcassets in Resources */,
@@ -277,6 +276,7 @@
 				5ED0DA341A5544300095B2E1 /* UserCenterViewController.swift in Sources */,
 				5ED0DA081A551FF80095B2E1 /* AppDelegate.swift in Sources */,
 				5ED0DA361A5547BB0095B2E1 /* DetailContentViewController.swift in Sources */,
+				B3C865A21A95C0C000B8808F /* UserCenterCellClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
