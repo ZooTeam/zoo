@@ -55,9 +55,6 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
         
         let tableCell:UserCenterCellClass = tableView.dequeueReusableCellWithIdentifier("UserCenterCell") as UserCenterCellClass
         
-
-
-        
         self.view.addSubview(tableCell.userImage)
         self.view.addSubview(tableCell.title)
         self.view.addSubview(tableCell.detail)
