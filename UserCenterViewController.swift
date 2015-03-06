@@ -10,9 +10,9 @@ import UIKit
 
 class UserCenterViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
     
-// read plist
+// read plist declare
     var plistData:NSString = ""
-    var data:NSMutableArray = NSMutableArray()
+    var dataSource:NSMutableArray = NSMutableArray()
     var contentID:NSString=""
     
     
@@ -20,9 +20,22 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+       var tableView = UITableView(frame: CGRectMake(0, 0, 320, 500))
+        tableView.delegate = self
+        tableView.dataSource = self
+        //创建一个重用的单元格
+        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "UserCenterCell")
+        self.view.addSubview(tableView)
+        
+        
+//        tableView.delegate = self
+//        tableView.dataSource = self
+        
+
+        
 //  -----------读取plist文件----------------
     plistData = NSBundle.mainBundle().pathForResource("UserCenterCell", ofType: "plist")!
-    data = NSMutableArray(contentsOfFile: plistData)!
+    dataSource = NSMutableArray(contentsOfFile: plistData)!
 
         
 
@@ -36,40 +49,49 @@ class UserCenterViewController: UIViewController,UITableViewDelegate,UITableView
 
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return data.count
+        return dataSource.count
+        
         //section 数量
     }
 
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
-        var section = data[section] as NSMutableArray
-        
-        return data.count
-        
+        var section = dataSource[section] as NSMutableArray
+        return dataSource.count
+
     }
-    
+    func tableView(tableView:UITableView, titleForHeaderInSection
+        section:Int)->String
+    {
+        return "有2个控件"
+    }
 
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        let tableCell:UserCenterCellClass = tableView.dequeueReusableCellWithIdentifier("UserCenterCell") as UserCenterCellClass
         
-        self.view.addSubview(tableCell.userImage)
-        self.view.addSubview(tableCell.title)
-        self.view.addSubview(tableCell.detail)
-
+        
+        //同一形式的单元格重复使用，在声明时已注册
+        let cellIdentifier = "UserCenterCell" as String
+        var cell:UserCenterCellClass? = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as? UserCenterCellClass
+        
+        if cell == nil{
+            cell = UserCenterCellClass(style:UITableViewCellStyle.Default, reuseIdentifier: cellIdentifier)
+        }
+        
+        
         var dataRow = indexPath.row + 1
-        var dataGroupA = data[0] as NSArray
-        //println(dataGroupA)
+        var dataGroupA = dataSource[0] as NSArray
         var dataGroupB = dataGroupA[0] as NSDictionary
-        tableCell.title.text = dataGroupB["title"] as NSString
-        tableCell.detailTextLabel?.text = "1231"
-        tableCell.imageView?.backgroundColor = UIColor.blackColor()
 
-  
+        cell?.cellTitle.text = dataGroupB["title"] as NSString
         
-        return tableCell
+        return cell!
+        
+        
+        
+//        return tableCell
         
         //cell内容
     }

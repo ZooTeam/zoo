@@ -22,6 +22,7 @@
 		5ED0DA321A553D8B0095B2E1 /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0DA311A553D8B0095B2E1 /* ChannelViewController.swift */; };
 		5ED0DA341A5544300095B2E1 /* UserCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0DA331A5544300095B2E1 /* UserCenterViewController.swift */; };
 		5ED0DA361A5547BB0095B2E1 /* DetailContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ED0DA351A5547BB0095B2E1 /* DetailContentViewController.swift */; };
+		5EF07FFF1AA9796D00CA85A0 /* cellHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF07FFE1AA9796D00CA85A0 /* cellHelp.swift */; };
 		5EFCCFBB1A799F5E001B3702 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFCCFBA1A799F5E001B3702 /* LoginViewController.swift */; };
 		B3A94F741A936CAD004E9879 /* UserCenterCell.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3A94F731A936CAD004E9879 /* UserCenterCell.plist */; };
 		B3C865A21A95C0C000B8808F /* UserCenterCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C865A11A95C0C000B8808F /* UserCenterCellClass.swift */; };
@@ -59,6 +60,7 @@
 		5ED0DA311A553D8B0095B2E1 /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChannelViewController.swift; path = ../ChannelViewController.swift; sourceTree = "<group>"; };
 		5ED0DA331A5544300095B2E1 /* UserCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserCenterViewController.swift; path = ../UserCenterViewController.swift; sourceTree = "<group>"; };
 		5ED0DA351A5547BB0095B2E1 /* DetailContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailContentViewController.swift; path = ../DetailContentViewController.swift; sourceTree = "<group>"; };
+		5EF07FFE1AA9796D00CA85A0 /* cellHelp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellHelp.swift; sourceTree = "<group>"; };
 		5EFCCFBA1A799F5E001B3702 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		B3A94F731A936CAD004E9879 /* UserCenterCell.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = UserCenterCell.plist; sourceTree = "<group>"; };
 		B3C865A11A95C0C000B8808F /* UserCenterCellClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCenterCellClass.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				5ED0DA271A5522950095B2E1 /* TableViewCellClass.swift */,
 				B3C865A11A95C0C000B8808F /* UserCenterCellClass.swift */,
+				5EF07FFE1AA9796D00CA85A0 /* cellHelp.swift */,
 			);
 			name = class;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				5ED0DA0A1A551FF80095B2E1 /* ZooViewController.swift in Sources */,
 				5ED0DA281A5522950095B2E1 /* TableViewCellClass.swift in Sources */,
 				5ED0DA321A553D8B0095B2E1 /* ChannelViewController.swift in Sources */,
+				5EF07FFF1AA9796D00CA85A0 /* cellHelp.swift in Sources */,
 				B3FD53851A88DEE900E969F8 /* PublishViewController.swift in Sources */,
 				5ED0DA341A5544300095B2E1 /* UserCenterViewController.swift in Sources */,
 				5ED0DA081A551FF80095B2E1 /* AppDelegate.swift in Sources */,

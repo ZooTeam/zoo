@@ -2,15 +2,33 @@ import UIKit
 
 class UserCenterCellClass: UITableViewCell {
     
-//    override init(style: UITableViewCellStyle, reuseIdentifier: String?){
-//        
-//    }
-// 
-//     required init(coder aDecoder: NSCoder) {
-//         fatalError("init(coder:) has not been implemented")
-//     }
-//   
+    
+    var userImage : UIImageView!
+    var cellTitle = UILabel()
+    var cellDetail = UILabel()
+    
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        
+        super.init(style: style , reuseIdentifier: reuseIdentifier)
+     
+        
+        userImage = UIImageView(frame: CGRectMake(10, 10, 30, 30))
+        cellTitle = UILabel(frame: CGRectMake(70, 15, 200, 30))
+        cellDetail = UILabel(frame: CGRectMake(10, 10, 10, 10))
+            
 
+        self.contentView.addSubview(userImage)
+        self.contentView.addSubview(cellDetail)
+        self.contentView.addSubview(cellTitle)
+        }
+    
+
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,15 +37,12 @@ class UserCenterCellClass: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
         // Configure the view for the selected state
     }
-
-        var userImage = UIImageView(frame:CGRectMake(15, 15, 50, 50))
-        var title = UILabel(frame: CGRectMake(175, 20, 200,20))
-        var detail = UILabel(frame:CGRectMake(75, 40, 200, 20))
-
-
+    
+    
 }
+
+
 
 

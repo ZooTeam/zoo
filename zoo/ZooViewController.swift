@@ -27,10 +27,10 @@ class ZooViewController: UIViewController,UITableViewDelegate,UITableViewDataSou
         
 
 //     -------------发新消息-----------------
-        var publishButton = UIButton()
-        publishButton.frame = CGRectMake(280,520,30,30)
-        publishButton.backgroundColor = UIColor.blackColor()
-        self.view.addSubview(publishButton)
+//        var publishButton = UIButton()
+//        publishButton.frame = CGRectMake(280,520,30,30)
+//        publishButton.backgroundColor = UIColor.blackColor()
+//        self.view.addSubview(publishButton)
        
     }
 
